@@ -1,0 +1,23 @@
+// frontend/src/components/ChatbotWidgets.js
+import React from 'react';
+import { Button } from '@mui/material';
+
+const Options = (props) => {
+  const options = [
+    { text: 'Food Safety Tips', handler: () => props.actionProvider.handleHumanMessage("Give me some food safety tips"), id: 1 },
+    { text: 'Leftover Recipes', handler: () => props.actionProvider.handleHumanMessage("Suggest a recipe for leftover rice"), id: 2 },
+    { text: 'Predict Shelf Life', handler: () => props.actionProvider.handleRedirectToPredict(), id: 3 },
+  ];
+
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
+      {options.map((option) => (
+        <Button key={option.id} variant="outlined" size="small" onClick={option.handler}>
+          {option.text}
+        </Button>
+      ))}
+    </div>
+  );
+};
+
+export default Options;
