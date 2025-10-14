@@ -50,5 +50,5 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 **1. Clone the Repository**
 ```bash
-git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
-cd your-repository-name
+git clone [https://github.com/Dakshinde/Anna.git](https://github.com/Dakshinde/Anna.git)
+cd Anna
