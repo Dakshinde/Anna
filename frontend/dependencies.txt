@@ -1,0 +1,12 @@
+@mui/material
+@emotion/react
+@emotion/styled
+
+@mui/icons-material
+lucide-react
+
+axios
+
+react-router-dom
+react-markdown
+  
