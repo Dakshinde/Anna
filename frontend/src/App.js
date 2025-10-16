@@ -1,35 +1,42 @@
 // frontend/src/App.js
 import React from 'react';
-// Import the router functionality from the library
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Import our custom components
+import { ThemeProviderWrapper } from './theme';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import MLPage from './pages/MLPage';
-import ChatbotComponent from './components/ChatbotComponent'; // Import the new chatbot
+import NgoPage from './pages/NgoPage';
+import AboutPage from './pages/AboutPage'; // Import the new About Page
+import Footer from './components/Footer'; // Import the new Footer component
 
-// Import global styles
-import './App.css';
 
-function App() {
+function ThemedApp({ theme }) {
   return (
-    // The Router component must wrap your entire application
-    <Router>
-      <div className="App">
-        {/* The Navbar is now inside the router */}
-        <Navbar />
-        
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/predict" element={<MLPage />} />
-        </Routes>
-
-        {/* This adds the new, beautiful chatbot to every page */}
-        <ChatbotComponent />
-      </div>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+          <Navbar />
+          <main style={{ flexGrow: 1 }}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/predict" element={<MLPage />} />
+              <Route path="/NGOs" element={<NgoPage />} />  
+              <Route path="/about" element={<AboutPage />} /> {/* Add route for About Page */}
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <ThemeProviderWrapper>
+      {(theme) => <ThemedApp theme={theme} />}
+    </ThemeProviderWrapper>
+  );
+}
