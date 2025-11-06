@@ -1,0 +1,22 @@
+[
+    "num__Time_since_preparation_hours",
+    "num__Oil_separation",
+    "cat__Storage_place_Freezer",
+    "cat__Storage_place_Refrigerator",
+    "cat__Storage_place_Room Temperature",
+    "cat__Acidity_source_High",
+    "cat__Acidity_source_Low/Normal",
+    "cat__Acidity_source_Moderate",
+    "cat__Consistency_Normal",
+    "cat__Consistency_Slightly Thickened",
+    "cat__Consistency_Slimy",
+    "cat__Consistency_Watery",
+    "cat__Container_type_Ceramic/Glass",
+    "cat__Container_type_Plastic",
+    "cat__Container_type_Steel/Metal",
+    "cat__Smell_Foul",
+    "cat__Smell_Musty",
+    "cat__Smell_Normal",
+    "cat__Smell_Slightly Sour",
+    "cat__Smell_Very Sour"
+]

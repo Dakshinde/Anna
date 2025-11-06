@@ -1,0 +1,9 @@
+[
+    "time_since_cooking_hr",
+    "storage_location",
+    "storage_container",
+    "fat_content",
+    "ambient_season",
+    "observed_texture",
+    "observed_appearance"
+]
